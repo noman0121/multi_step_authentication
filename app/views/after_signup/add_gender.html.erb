@@ -1,0 +1,6 @@
+<%= form_for @user, url: wizard_path, method: :put do |f| %>
+	<%= f.select :gender, User.gender_for_select, {}, class: "form-control" %>
+	<%=f.submit 'submit'%>
+<% end %>
+
+<%= link_to 'skip', next_wizard_path %>
